@@ -16,6 +16,19 @@ class ChecklistViewController: UITableViewController {
     
     var items: [ChecklistItem]
     
+    @IBAction func addItem() {
+        let newRowIndex = items.count
+        
+        let item = ChecklistItem()
+        item.text = "I am a new row"
+        item.checked = false
+        items.append(item)
+        
+        let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+    }
+    
 //    This instantiates the array. Now items contains a valid array object,
 //    but the array has no ChecklistItem objects inside it yet.
     
