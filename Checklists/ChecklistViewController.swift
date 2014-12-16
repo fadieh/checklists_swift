@@ -55,9 +55,9 @@ class ChecklistViewController: UITableViewController {
         super.init(coder: aDecoder)
     }
     
-    func configureCheckmarkForCell(cell: UITableViewCell, indexPath: NSIndexPath) {
+    func configureCheckmarkForCell(cell: UITableViewCell, withChecklistItem item: ChecklistItem) {
         
-        let item = items[indexPath.row]
+//        , indexPath: NSIndexPath
         
         if item.checked {
             cell.accessoryType = .Checkmark
@@ -86,9 +86,9 @@ class ChecklistViewController: UITableViewController {
         
         if let cell = tableView.cellForRowAtIndexPath(indexPath) {
             let item = items[indexPath.row]
-            item.checked = !item.checked
+            item.toggleChecked()
             
-            configureCheckmarkForCell(cell, indexPath: indexPath)
+            configureCheckmarkForCell(cell, withChecklistItem: item)
         }
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
@@ -100,24 +100,16 @@ class ChecklistViewController: UITableViewController {
         
         let item = items[indexPath.row]
         
-        let label = cell.viewWithTag(1000) as UILabel
-        label.text = item.text
+        configureTextForCell(cell, withChecklistItem: item)
+        configureCheckmarkForCell(cell, withChecklistItem: item)
         
-        configureCheckmarkForCell(cell, indexPath: indexPath)
         return cell
     }
     
-//    The two methods above are part of UITableView's data source protocol.
-//    The data source is the link between your data and the table view.
-//    The table view needs to know how many rows of data it has and how it should display rows.
-//    Say to the table view, "this view controller is now your data source."
-//    "ask if questions about the data anytime you feel like it."
-    
-//    Once hooked up to a data source (VC) the table view sends 'numberOfRowsInSection' message
-//    to find out how many rows there are.
-//    And when the table view needs to draw a particular row on the screen, it sends the
-//    "CellForRowAtIndexPath" message to ask the data source for a cell.
-    
+    func configureTextForCell(cell: UITableViewCell, withChecklistItem item: ChecklistItem) {
+        let label = cell.viewWithTag(1000) as UILabel
+        label.text = item.text
+    }
     
 
 }
