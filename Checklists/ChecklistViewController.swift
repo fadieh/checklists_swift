@@ -47,6 +47,11 @@ class ChecklistViewController: UITableViewController {
         row4item.checked = true
         items.append(row4item)
         
+        let row5item = ChecklistItem()
+        row5item.text = "Clean up Github"
+        row5item.checked = true
+        items.append(row5item)
+        
         super.init(coder: aDecoder)
     }
     
@@ -74,7 +79,7 @@ class ChecklistViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return items.count
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
