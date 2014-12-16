@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D760C5D1A409AC600431852 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D760C5C1A409AC600431852 /* ChecklistItem.swift */; };
 		4DE438B11A3F4D2B00FB01C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE438B01A3F4D2B00FB01C1 /* AppDelegate.swift */; };
 		4DE438B31A3F4D2B00FB01C1 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE438B21A3F4D2B00FB01C1 /* ChecklistViewController.swift */; };
 		4DE438B61A3F4D2B00FB01C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE438B41A3F4D2B00FB01C1 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D760C5C1A409AC600431852 /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		4DE438AB1A3F4D2B00FB01C1 /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE438AF1A3F4D2B00FB01C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE438B01A3F4D2B00FB01C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				4DE438B71A3F4D2B00FB01C1 /* Images.xcassets */,
 				4DE438B91A3F4D2B00FB01C1 /* LaunchScreen.xib */,
 				4DE438AE1A3F4D2B00FB01C1 /* Supporting Files */,
+				4D760C5C1A409AC600431852 /* ChecklistItem.swift */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DE438B31A3F4D2B00FB01C1 /* ChecklistViewController.swift in Sources */,
+				4D760C5D1A409AC600431852 /* ChecklistItem.swift in Sources */,
 				4DE438B11A3F4D2B00FB01C1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +409,7 @@
 				4DE438CC1A3F4D2B00FB01C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DE438CD1A3F4D2B00FB01C1 /* Build configuration list for PBXNativeTarget "ChecklistsTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				4DE438CF1A3F4D2B00FB01C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
